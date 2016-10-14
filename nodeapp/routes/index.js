@@ -13,7 +13,7 @@ var credentials = extend({
 }, bluemix.getServiceCreds('natural_language_classifier')); 
 
 var nlClassifier = watson.natural_language_classifier(credentials);
-var classifierId = '<classifier>';
+var classifierId = '<classifier-id>';
 
 router.post('/predict', function(req, res, next) {
 	var params = {
