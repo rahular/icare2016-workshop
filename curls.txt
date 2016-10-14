@@ -1,0 +1,8 @@
+Train NLC:
+curl -i -u "<username>":"<password>" -F training_data=@<path-to-training-file> -F training_metadata="{\"language\":\"en\",\"name\":\"icare2016-1\"}" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+Check NLC status:
+curl -u "<username>":"<password>" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/<classifier-id>"
+
+Ask for prediction:
+curl -G -u "<username>":"<password>" "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/<classifier-id>/classify" --data-urlencode "text=What a waste of time! God!"
